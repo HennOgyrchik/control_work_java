@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class Toy implements Comparable<Toy>{
     private static int id=0;
     private String title;
@@ -9,6 +11,11 @@ public class Toy implements Comparable<Toy>{
             this.weight = weight;
         }else {
             throw new IncorrectWeightValueException();
+        }
+        if (count>0){
+            this.count=count;
+        } else {
+            throw new RuntimeException("Неверное количество игрушек");
         }
         this.id=id++;
         this.title = title;

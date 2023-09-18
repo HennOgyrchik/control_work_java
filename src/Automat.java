@@ -27,9 +27,10 @@ public class Automat {
             System.out.println(e.getMessage());
         }
 
-        if ((toy != null)&&(toy.getCount()>0)){
+        if (toy != null) {
             toy.setCount(toy.getCount()-1);
         }
+
 
         return toy;
     }
